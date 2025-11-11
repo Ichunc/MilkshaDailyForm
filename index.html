@@ -76,7 +76,8 @@
 </head>
 <body>
 
-<form method="post" action="https://script.google.com/macros/s/AKfycbzJIcrfQxBnpFuiMo6XZ_mp6txlwZjb-Ie-14tcTVxaCkC6mYzs8M2BT4W8eVjqn2Nt6A/exec">
+<form method="post" action="https://script.google.com/macros/s/AKfycbzfVlAo0BIzu3bxIL1YO0Chvw-zaOfrG_w9aoXh5fvvzjCsGvE41f9t4xp3olIbf-53JQ/exec">
+  
     
   <div class="form-group">
     <h2 class="heading">迷客夏縣府店每日報表</h2>
@@ -228,6 +229,14 @@
       </div>
     </div>
 
+    <div class="form-field" style="display: none;">
+      <label for="password">密碼</label>
+      <div class="password-field">
+        <input type="password" id="password" class="floatLabel" name="PassWord">
+        <button type="button" class="show-password" onclick="togglePasswordVisibility()">👁️</button>
+      </div>
+    </div>
+
     <div>
       <button type="submit" value="Submit">送出</button>
     </div>
@@ -243,8 +252,8 @@
     const formattedDate = currentDate.toLocaleDateString('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
     today.value = formattedDate;
 
-
     showContent()
+
     function showContent() {
       const pm_shift = document.getElementById("PM");
       const trash_tea = document.getElementById("trash_tea");
@@ -258,6 +267,12 @@
         trash_tea.style.display = "none";
         inputs.forEach(input => input.value = 0); // 將所有報廢茶量的輸入設為0
       }
+    }
+
+    function togglePasswordVisibility() {
+        const passwordInput = document.getElementById("password");
+        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+        passwordInput.setAttribute("type", type);
     }
 </script>
 

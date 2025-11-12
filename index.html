@@ -35,7 +35,7 @@
             width: 150px; /* 統一標籤寬度 */
             text-align: center; /* 右對齊 */
         }
-        input[type="date"], input[type="number"] {
+        input[type="date"], input[type="number"], input[type="text"] {
             max-width: 150px; /* 日期欄位可以改寬 */
             padding: 8px;
             border: 1px solid #ccc;
@@ -83,8 +83,13 @@
     <h2 class="heading">迷客夏縣府店每日報表</h2>
 
     <div class="form-field">
-      <label for="today" class="date">今天日期</label>
+      <label for="today" class="date">日期</label>
       <input type="date" id="today" class="floatLabel" name="今天日期">
+    </div>
+
+    <div class="form-field">
+      <label for="fill_person">填寫人</label>
+      <input type="text" id="fill_person" class="floatLabel" name="填寫人">
     </div>
 
     <div class="radio-group">
